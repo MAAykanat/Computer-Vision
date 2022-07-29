@@ -28,7 +28,7 @@ def rescaleFrame(frame, scale= 0.75):
     return cv.resize(frame, dimension, interpolation=cv.INTER_AREA)
 
 def main():
-    path = "D:/!!!MAAykanat Dosyalar/MAA_Own_Study/Usable Data/Computer Vision"
+    path = "put location to this string"
 
     img = cv.imread(path + "/WaldoBeach.jpg")    
     img_resized = rescaleFrame(img)
