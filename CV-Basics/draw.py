@@ -40,10 +40,27 @@ def main():
 
     #5. Put a Text
     cv.putText(blank_img, 'Hello', (255,255), cv.FONT_HERSHEY_COMPLEX, 1.0, (0,255,0), 2)
-    cv.imshow("Basics of OpenCV", blank_img)
+    cv.imshow("Put text", blank_img)
     waitKey(0)
 
-    
+    cv.destroyAllWindows()# Close all windows before last work
+
+    cv.putText(blank_opencv_basics, 'OpenCV Basics', (blank_opencv_basics.shape[1]//2-100,blank_opencv_basics.shape[0]//2-100), cv.FONT_HERSHEY_COMPLEX, fontScale=0.8, color=(125,255,125), thickness=2)
+    cv.rectangle(blank_opencv_basics, (blank_opencv_basics.shape[1]//2-100,blank_opencv_basics.shape[0]//2-140), (blank_opencv_basics.shape[1]//2+100, blank_opencv_basics.shape[0]//2-80), (255,120,120), thickness=2)
+    #Let's put target board :)
+    cv.circle(blank_opencv_basics, (blank_opencv_basics.shape[1]//2, blank_opencv_basics.shape[0]//2), radius=10, color=(0,0,255), thickness=5)
+    cv.circle(blank_opencv_basics, (blank_opencv_basics.shape[1]//2, blank_opencv_basics.shape[0]//2), radius=20, color=(255,255,255), thickness=5)
+    cv.circle(blank_opencv_basics, (blank_opencv_basics.shape[1]//2, blank_opencv_basics.shape[0]//2), radius=30, color=(0,0,255), thickness=5)
+    cv.circle(blank_opencv_basics, (blank_opencv_basics.shape[1]//2, blank_opencv_basics.shape[0]//2), radius=40, color=(255,255,255), thickness=5)
+    cv.circle(blank_opencv_basics, (blank_opencv_basics.shape[1]//2, blank_opencv_basics.shape[0]//2), radius=50, color=(0,0,255), thickness=5)
+    #Let's put some arrow :)
+    cv.line(blank_opencv_basics, (0, 800), (150,600), color=(0,0,255), thickness=3)
+    cv.line(blank_opencv_basics, (150,600), (100,600), color=(0,0,255), thickness=3)
+    cv.line(blank_opencv_basics, (150,600), (150,650), color=(0,0,255), thickness=3)
+    cv.imshow("OpenCV Basics",blank_opencv_basics)
+    waitKey(0)
+    cv.destroyAllWindows()
+
 if __name__ == '__main__':
     try:
         main()
