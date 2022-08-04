@@ -48,14 +48,14 @@ def rotate(img, angle, rotPoint = None):
     return cv.warpAffine(img, rotMat, dimensions)
 
 def main():
-    path = "/home/maaykanat/Desktop/OwnStudy/Usable Data/"
+    path = "put location to this string"
 
     img = cv.imread(path + "Background_Subtraction_Tutorial_frame.png")
     cv.imshow("Original-Image", img)
     
     print("Image height is: {}\nImage width is: {}".format(img.shape[0], img.shape[1]))
 
-    #Tranlation
+    #Translation
     translate_img = translate(img, 100, 100)
     cv.imshow("Translated-Image", translate_img)
     #Rotation 
