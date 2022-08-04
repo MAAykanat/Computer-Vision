@@ -40,6 +40,10 @@ def main():
     #Eroding
     eroded = cv.erode(dilated, (5,5), iterations=3)
     cv.imshow("Eroded", eroded)
+
+    #Cropping
+    cropped = resized[50:200, 200:400]
+    cv.imshow("Cropped", cropped)
     
     cv.waitKey(0)
     cv.destroyAllWindows()
