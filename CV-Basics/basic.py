@@ -10,16 +10,10 @@
 
 import cv2 as cv
 import numpy as np
-global kernel 
-# kernel = np.ones((3,3),np.uint8)
-kernel = np.array([[0,0,0],[0,1,0],[0,0,0]])
-# kernel = np.array(kernel).reshape(3,3) 
-# kernel = np.ones((5,5), dtype=np.uint8)
 
 def main():
     path = "put location to this string"
 
-    print(kernel)
     img = cv.imread(path+ "/minions.jpg")
     cv.imshow("Board", img)
     
@@ -41,12 +35,10 @@ def main():
 
     # Dialete
     dilated = cv.dilate(canny,(3,3), iterations=3) # Dilate the edges from Canny
-    # dilated = cv.dilate(canny, kernel, iterations=3)
     cv.imshow("Dilated", dilated)
 
     #Eroding
     eroded = cv.erode(dilated, (5,5), iterations=3)
-    # eroded = cv.erode(dilated, kernel, iterations=3)
     cv.imshow("Eroded", eroded)
     
     cv.waitKey(0)
