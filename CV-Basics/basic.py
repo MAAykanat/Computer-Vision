@@ -17,7 +17,7 @@ kernel = np.array([[0,0,0],[0,1,0],[0,0,0]])
 # kernel = np.ones((5,5), dtype=np.uint8)
 
 def main():
-    path = "/home/maaykanat/Desktop/OwnStudy/Usable Data"
+    path = "put location to this string"
 
     print(kernel)
     img = cv.imread(path+ "/minions.jpg")
