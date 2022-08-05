@@ -9,7 +9,9 @@
     # On the other hand matplotlib uses RGB thats why they show different.
     # Try= plt.imshow(img) \n plt.show()
     #------------2-------------#
-    #
+    # There is no direct convert HSV2Gray or LAB2Gray,
+    # First, Convert HSV2BGR then BGR2GRAY
+    #--------------------------#
     ###SOURCES###
     #---------Color-Spaces Advantages-Disadvantages---------#
     # There are many research about this topic, please check Research-Source file to details.
