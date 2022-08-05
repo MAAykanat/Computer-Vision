@@ -14,7 +14,7 @@
     #---------Color-Spaces Advantages-Disadvantages---------#
     # There are many research about this topic, please check Research-Source file to details.
     # Clarification table: Advantages-and-disadvantages-of-color-spaces.png
-    # Referans: 
+    # Referans: Garcia-Lamont, F., Cervantes, J., López, A., & Rodriguez, L. (2018). Segmentation of images by color features: A survey. Neurocomputing, 292, 1-27.
     # Doi number:10.1016/j.neucom.2018.01.091
     #-----------------------------------#
 
