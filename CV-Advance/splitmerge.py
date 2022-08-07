@@ -8,7 +8,7 @@ from cv2 import imshow
 import numpy as np
 
 def main():
-    path = "/home/maaykanat/Desktop/OwnStudy/Usable Data/"
+    path = "put location to this string"
     
     #Original image is BGR 3 channel image
     img = cv.imread(path + "Background_Subtraction_Tutorial_frame.png")
