@@ -12,7 +12,7 @@
 import cv2 as cv
 
 def main():
-    path = "/home/maaykanat/Desktop/OwnStudy/Usable Data/"
+    path = "put location to this string"
 
     img = cv.imread(path + "cats.jpg")
     cv.imshow("Original-Image", img)
