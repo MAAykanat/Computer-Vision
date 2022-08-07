@@ -7,7 +7,7 @@ import numpy as np
 
 
 def main():
-    path = "D:/!!!MAAykanat Dosyalar/MAA_Own_Study/Usable Data/Computer Vision"
+    path = "put location to this string"
     
     blank_img = np.zeros((500,500,3), dtype='uint8') #Create blank image default value 0
     blank_circle = np.zeros((500,500,3), dtype= 'uint8')
