@@ -24,7 +24,7 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
 def main():
-    path = "/home/maaykanat/Desktop/OwnStudy/Usable Data/data/"
+    path = "put location to this string"
 
     img = cv.imread(path + "starry_night.jpg")
     cv.imshow("Original Image", img)
