@@ -4,6 +4,15 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 import numpy as np
 
+def plotGraph(figure, title, xlab, ylab, xlim):
+    plt.figure()
+    plt.title(title)
+    plt.xlabel(xlab)
+    plt.ylabel(ylab)
+    plt.xlim(xlim)
+    plt.plot(figure)
+    plt.show()
+
 def main():
     path = "/home/maaykanat/Desktop/OwnStudy/Usable Data"
 
@@ -19,24 +28,12 @@ def main():
     #Gray-Scale Histogtam
     gray_hist = cv.calcHist([gray], [0], mask=None,histSize=[256],ranges=[0,256])
 
-    plt.figure()
-    plt.title("Gray-Scale Histogram"),
-    plt.xlabel("Bins")
-    plt.ylabel("# of pixels")
-    plt.xlim([0,256])
-    plt.plot(gray_hist)
-    plt.show()
+    plotGraph(figure=gray_hist, title="Gray-Scale Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256])
 
     #BGR Histogram
     img_hist = cv.calcHist([img], [2], mask=None, histSize=[256], ranges=[0,256])
 
-    plt.figure()
-    plt.title("BGR Histogram"),
-    plt.xlabel("Bins")
-    plt.ylabel("# of pixels")
-    plt.xlim([0,256])
-    plt.plot(img_hist)
-    plt.show()    
+    plotGraph(figure=img_hist, title="BGR Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256])
 
     cv.waitKey()
     cv.destroyAllWindows()
