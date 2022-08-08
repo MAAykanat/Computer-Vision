@@ -1,9 +1,17 @@
+### Used image, video and gif dataset is taken from Kaggle and link is below
+### |--------------------------------------------------------------------------------| ###
+### https://www.kaggle.com/datasets/bulentsiyah/opencv-samples-images?resource=download
+### |--------------------------------------------------------------------------------| ###
 
+    ###NOTES###
+    #  
+    ###SOURCES###
+    
 import cv2 as cv
 import numpy as np
 
 def main():
-    path = "/home/maaykanat/Desktop/OwnStudy/Usable Data"
+    path = "put location to this string"
 
     img = cv.imread(path + "/cats.jpg")
     cv.imshow("Original-Image", img)
