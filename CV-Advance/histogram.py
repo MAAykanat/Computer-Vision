@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 
-def plotGraph(figure, title, xlab, ylab, xlim, savePath):
+def saveGraph(figure, title, xlab, ylab, xlim, savePath):
     plt.figure()
     plt.title(title)
     plt.xlabel(xlab)
@@ -37,15 +37,15 @@ def main():
     gray_hist = cv.calcHist([gray], [0], mask=None,histSize=[256],ranges=[0,256])
     gray_hist_mask = cv.calcHist([gray], [0], mask=mask,histSize=[256],ranges=[0,256])
 
-    plotGraph(figure=gray_hist, title="Gray-Scale Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Gray-Scale Histogram.png")
-    plotGraph(figure=gray_hist_mask, title="Masked Gray-Scale Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Masked Gray-Scale Histogram.png")
+    saveGraph(figure=gray_hist, title="Gray-Scale Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Gray-Scale Histogram.png")
+    saveGraph(figure=gray_hist_mask, title="Masked Gray-Scale Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Masked Gray-Scale Histogram.png")
 
     #BGR Histogram
     img_hist = cv.calcHist([img], [2], mask=None, histSize=[256], ranges=[0,256])
     img_hist_mask = cv.calcHist([img], [2], mask=mask, histSize=[256], ranges=[0,256])
 
-    plotGraph(figure=img_hist, title="BGR Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/BGR Histogram.png")
-    plotGraph(figure=img_hist_mask, title="Mask-BGR Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Masked BGR Histogram.png")
+    saveGraph(figure=img_hist, title="BGR Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/BGR Histogram.png")
+    saveGraph(figure=img_hist_mask, title="Mask-BGR Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Masked BGR Histogram.png")
     
     cv.waitKey()
     cv.destroyAllWindows()
