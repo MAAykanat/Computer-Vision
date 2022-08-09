@@ -1,12 +1,19 @@
+### Used image, video and gif dataset is taken from Kaggle and link is below
+### |--------------------------------------------------------------------------------| ###
+### https://www.kaggle.com/datasets/bulentsiyah/opencv-samples-images?resource=download
+### |--------------------------------------------------------------------------------| ###
 
-from turtle import title
+    ###NOTES###
+       
+    ###SOURCES###
+    
 import cv2 as cv
 import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-
 def saveGraph(figure, title, xlab, ylab, xlim, savePath):
+    #Saving matplolib graph to file
     plt.figure()
     plt.title(title)
     plt.xlabel(xlab)
@@ -16,7 +23,7 @@ def saveGraph(figure, title, xlab, ylab, xlim, savePath):
     plt.savefig(savePath)
 
 def main():
-    path = "/home/maaykanat/Desktop/OwnStudy/Usable Data"
+    path = "put location to this string"
     savePath= os.getcwd() + "/CV-Advance/Histogram-Results"
 
     img = cv.imread(path + "/data/fruits.jpg")
