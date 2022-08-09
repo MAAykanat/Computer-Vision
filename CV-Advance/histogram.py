@@ -40,13 +40,19 @@ def main():
     saveGraph(figure=gray_hist, title="Gray-Scale Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Gray-Scale Histogram.png")
     saveGraph(figure=gray_hist_mask, title="Masked Gray-Scale Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Masked Gray-Scale Histogram.png")
 
-    #BGR Histogram
-    img_hist = cv.calcHist([img], [2], mask=None, histSize=[256], ranges=[0,256])
-    img_hist_mask = cv.calcHist([img], [2], mask=mask, histSize=[256], ranges=[0,256])
+    #Colour Histogram
+    color= ('b','g','r')
 
-    saveGraph(figure=img_hist, title="BGR Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/BGR Histogram.png")
-    saveGraph(figure=img_hist_mask, title="Mask-BGR Histogram", xlab="Bins", ylab="# of pixels", xlim=[0,256], savePath=savePath+"/Masked BGR Histogram.png")
-    
+    plt.figure()
+    plt.title("Color Histogram")
+    plt.xlabel("Bins")
+    plt.ylabel("# of pixels")
+    for i,col in enumerate(color):
+        color_hist=cv.calcHist([img], [i], mask=None, histSize=[256], ranges=[0,256]) 
+        plt.xlim([0,256])
+        plt.plot(color_hist,col)
+    plt.show()
+
     cv.waitKey()
     cv.destroyAllWindows()
 
