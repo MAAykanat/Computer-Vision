@@ -51,7 +51,7 @@ def main():
         color_hist=cv.calcHist([img], [i], mask=None, histSize=[256], ranges=[0,256]) 
         plt.xlim([0,256])
         plt.plot(color_hist,col)
-    plt.show()
+    plt.savefig(savePath + "/Color Histogram.png")
 
     cv.waitKey()
     cv.destroyAllWindows()
