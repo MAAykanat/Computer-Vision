@@ -1,6 +1,13 @@
+### Used image, video and gif dataset is taken from Kaggle and link is below
+### |--------------------------------------------------------------------------------| ###
+### https://www.kaggle.com/datasets/bulentsiyah/opencv-samples-images?resource=download
+### |--------------------------------------------------------------------------------| ###
+
+    ###NOTES###
+       
+    ###SOURCES###
 
 import cv2 as cv
-import os
 
 def main():
     path = "D:/!!!MAAykanat Dosyalar/MAA_Own_Study/Usable Data"
