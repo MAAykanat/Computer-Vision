@@ -10,7 +10,7 @@
 import cv2 as cv
 
 def main():
-    path = "D:/!!!MAAykanat Dosyalar/MAA_Own_Study/Usable Data"
+    path = "put location to this string"
     img = cv.imread(path + "/data/rubberwhale1.png")
     cv.imshow("Fruits-original", img) 
 
