@@ -4,7 +4,7 @@
 ### |--------------------------------------------------------------------------------| ###
 
     ###NOTES###
-       
+    # Blured images looks like better for edge detection
     ###SOURCES###
 
 import cv2 as cv
@@ -35,6 +35,9 @@ def main():
 
     adaptive_thresh_blur = cv.adaptiveThreshold(blur_gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY_INV, 7, 7)
     cv.imshow("Blur Adaptive-Treshold", adaptive_thresh_blur)
+
+    canny = cv.Canny(thresh_blur,120,255)
+    cv.imshow("Canny", canny)
 
     cv.waitKey(0)
     cv.destroyAllWindows()
