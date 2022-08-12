@@ -1,8 +1,16 @@
+# Code is created to find out faces by using HaarCascade
+# Disadvantages --> HaarCascade is better faces which directly looking to camera, there are some other methots for better results.
+# Advantage --> On the other hand, HaarCascade is computational friendly.
 
+    ###BENEFICIAL ARTICLES###
+    # A guide to Face Detection in Python
+    # Writer: Maël Fabien
+    # Link: https://towardsdatascience.com/a-guide-to-face-detection-in-python-3eab0f6b9fc1
 
 import cv2 as cv
 
 def face_rectangle(img, gray, scaleFactor, minNeigbors):
+    # Finding faces by using HaarCascade
     haar_cascade = cv.CascadeClassifier('.\Face-Detection\haar_face.xml')
     faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=scaleFactor, minNeighbors=minNeigbors)
 
@@ -13,7 +21,7 @@ def face_rectangle(img, gray, scaleFactor, minNeigbors):
 
 def main():
         
-    path = "D:/!!!MAAykanat Dosyalar/MAA_Own_Study/CV-Data/Face-Detection"
+    path = "put your working directory here!!!"
 
     img = cv.imread(path + '/foto.png')
     cv.imshow('Original Image', img)
@@ -45,10 +53,10 @@ def main():
 
     # Group-2 Photo
     group2 = cv.imread(path + '/Group2.jpeg')
-    cv.imshow("Group-1 Photo", group2)
+    cv.imshow("Group-2 Photo", group2)
 
     gray_group2 = cv.cvtColor(group2, cv.COLOR_BGR2GRAY)
-    cv.imshow("Gray-Group1", gray_group2)
+    cv.imshow("Gray-Group2", gray_group2)
 
     face_rectangle(group2, gray_group2, scaleFactor= 1.3, minNeigbors=5)
     
