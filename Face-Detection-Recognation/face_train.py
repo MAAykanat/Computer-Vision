@@ -4,7 +4,7 @@ import numpy as np
 
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
-train_path = "D:\!!!MAAykanat Dosyalar\MAA_Own_Study\CV-Data\Face-Recognation\\train"
+train_path = "Put train path here!"
 people = ['ben_afflek', 'elton_john', 'jerry_seinfeld', 'madonna', 'mindy_kaling']
 
 features=[]
