@@ -4,8 +4,6 @@ import numpy as np
 
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
-print(os.getcwd())
-
 train_path = "D:\!!!MAAykanat Dosyalar\MAA_Own_Study\CV-Data\Face-Recognation\\train"
 people = ['ben_afflek', 'elton_john', 'jerry_seinfeld', 'madonna', 'mindy_kaling']
 
@@ -33,8 +31,18 @@ def train():
                 features.append(face_roi)
                 labels.append(label)
 
-
 train()
 
-print(len(features))
-print(len(labels))
+print(f'# of features: {len(features)}')
+print(f'# of labels: {len(features)}') 
+
+features = np.array(features, dtype='object')
+labels = np.array(labels)
+
+face_recognizer = cv.face.LBPHFaceRecognizer_create()
+
+face_recognizer.train(features,labels)
+
+face_recognizer.save('face_trained.yml')
+np.save('features.npy', features)
+np.save('labels.npy', labels)
