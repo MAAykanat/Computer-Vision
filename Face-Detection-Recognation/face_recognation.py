@@ -6,7 +6,7 @@ import cv2 as cv
 import numpy as np
 
 def main():
-    path = "D:\!!!MAAykanat Dosyalar\MAA_Own_Study\CV-Data\Face-Recognation\\val"
+    path = "Validation Data working directory"
 
     haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
