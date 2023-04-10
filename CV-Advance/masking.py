@@ -11,6 +11,9 @@ import cv2 as cv
 import numpy as np
 
 def main():
+
+    print("OpenCV Version: ", cv.__version__)
+
     path = "put location to this string"
 
     img = cv.imread(path + "/cats.jpg")
